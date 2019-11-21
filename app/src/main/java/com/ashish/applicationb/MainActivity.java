@@ -60,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
             }
             TextView textView = (TextView)findViewById(R.id.responseTxt);
             textView.setText(result);
+            Intent resultIntent = new Intent();
+            intent.putExtra("message1",result);
+            setResult(1,intent);
+
+           finish();
+
         }
         else if(receivedAction.equals(Intent.ACTION_MAIN)){
             //app has been launched directly, not from share list
